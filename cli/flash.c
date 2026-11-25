@@ -127,6 +127,7 @@ static int spi_flash_read(int argc, char **argv)
 		unsigned long offset;
 		size_t length;
 		int out_fd;
+		const char *out_filename;
 	} cfg = {
 		.out_fd = -1,
 	};
@@ -215,6 +216,7 @@ static int spi_flash_write(int argc, char **argv)
 		struct switchtec_dev *dev;
 		unsigned long offset;
 		int in_fd;
+		const char *in_filename;
 		int erase_first;
 		int assume_yes;
 	} cfg = {
@@ -407,6 +409,7 @@ static int spi_flash_download(int argc, char **argv)
 		struct switchtec_dev *dev;
 		unsigned long offset;
 		int in_fd;
+		const char *in_filename;
 		int no_erase;
 		int verify;
 		int assume_yes;
